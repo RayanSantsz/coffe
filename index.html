@@ -1,46 +1,263 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!-- ===============================================
+     ESTRUTURA BASE DO DOCUMENTO HTML
+     =============================================== -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Coffe</title>
-</head>
+<!DOCTYPE html>                                    <!-- Declara que este é um documento HTML5 -->
+<html lang="pt-br">                                <!-- Tag raiz HTML com idioma português brasileiro -->
 
-<body>
-    <header class="header">
+<head>                                             <!-- Cabeçalho com metadados da página -->
+    <meta charset="UTF-8">                         <!-- Define codificação de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Configuração responsiva para dispositivos móveis -->
+    <link rel="stylesheet" href="style.css">       <!-- Vincula arquivo CSS externo para estilização -->
+    <title>Coffe</title>                           <!-- Título que aparece na aba do navegador -->
+</head>                                            <!-- Fim do cabeçalho -->
 
-        <section>
-            <a href="#" class="logo">
-                <img src="/assets/logo.png" alt="Logo">
+<!-- ===============================================
+     INÍCIO DO CORPO DA PÁGINA
+     =============================================== -->
+
+<body>                                             <!-- Início do corpo da página visível -->
+
+    <!-- ===============================================
+         CABEÇALHO FIXO COM NAVEGAÇÃO E ÍCONES
+         =============================================== -->
+
+    <header class="header">                        <!-- Cabeçalho principal da página com classe para estilização -->
+
+        <section>                                  <!-- Container interno do header -->
+            <!-- Logo da empresa -->
+            <a href="#" class="logo">              <!-- Link do logo (ainda sem destino definido) -->
+                <img src="/assets/logo.png" alt="Logo">  <!-- Imagem do logotipo da empresa -->
             </a>
 
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#about">Sobre</a>
-                <a href="#menu">Menu</a>
-                <a href="#review">Avaliações</a>
-                <a href="#address">Endereço</a>
-            </nav>
+            <!-- Menu de navegação principal -->
+            <nav class="navbar">                   <!-- Container de navegação -->
+                <a href="#home">Home</a>           <!-- Link para seção Home -->
+                <a href="#about">Sobre</a>         <!-- Link para seção Sobre -->
+                <a href="#menu">Menu</a>           <!-- Link para seção Menu -->
+                <a href="#review">Avaliações</a>   <!-- Link para seção Avaliações -->
+                <a href="#address">Endereço</a>    <!-- Link para seção Endereço -->
+            </nav>                                 <!-- Fim da navegação -->
 
-            <div class="icons">
+            <!-- Ícones de ação do cabeçalho -->
+            <div class="icons">                    <!-- Container dos ícones -->
+                <!-- Ícone do carrinho de compras -->
                 <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
-                    alt="shopping-cart--v1" />>
-                <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/search--v1.png" alt="search--v1" />
+                    alt="shopping-cart--v1" />>    <!-- Ícone de carrinho (30x30px, cor branca) -->
+                <!-- Ícone de pesquisa -->
+                <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/search--v1.png" alt="search--v1" />  <!-- Ícone de busca (30x30px, cor branca) -->
+            </div>                                 <!-- Fim do container de ícones -->
+        </section>                                 <!-- Fim do container interno -->
+    </header>                                      <!-- Fim do cabeçalho -->
+
+    <!-- ===============================================
+         SEÇÃO PRINCIPAL - HOME (PÁGINA INICIAL)
+         =============================================== -->
+
+    <div class="home-container">                   <!-- Container principal da home com imagem de fundo -->
+        <section id="home">                        <!-- Seção home com ID para navegação -->
+                <div class="content">              <!-- Container do conteúdo textual -->
+                    <!-- Título principal da página -->
+                    <h3>CODE COM O MELHOR CAFÉ DA REGIÃO</h3>  <!-- Título de destaque (h3) -->
+                    <!-- Parágrafo descritivo -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste neque, nulla minus perspiciatis blanditiis. Aliquam, quis a dolor perspiciatis illum ipsa vero natus, nobis dolores nulla atque explicabo voluptate.</p>  <!-- Texto descritivo da empresa -->
+                    <!-- Botão de call-to-action -->
+                    <a href="#" class="btn">Pegue o seu agora</a>  <!-- Botão principal de ação -->
+                </div>                             <!-- Fim do container de conteúdo -->
+        </section>                                 <!-- Fim da seção home -->
+    </div>                                         <!-- Fim do container home -->
+
+    <!-- ===============================================
+         SEÇÃO SOBRE NÓS (ABOUT)
+         =============================================== -->
+
+    <section class="about" id="about">             <!-- Seção "Sobre Nós" com ID para navegação -->
+        <!-- Título da seção -->
+        <h2 class="title">Sobre <span>nós</span></h2>  <!-- Título da seção com palavra destacada em span -->
+        
+        <div class="row">                          <!-- Container flex para layout horizontal -->
+            <!-- Container da imagem -->
+            <div class="container-image">          <!-- Div que contém a imagem ilustrativa -->
+                <img src="/assets/about-img.jpg" alt="sobre-nos">  <!-- Imagem representativa da seção -->
             </div>
-        </section>
-    </header>
 
-    <div class="home-container">
-        <section id="#home">
-                <div class="content">
-                    <h3>CODE COM O MELHOR CAFÉ DA REGIÃO</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste neque, nulla minus perspiciatis blanditiis. Aliquam, quis a dolor perspiciatis illum ipsa vero natus, nobis dolores nulla atque explicabo voluptate.</p>
-                    <a href="#" class="btn">Pegue o seu agora</a>
-                </div>
-        </section>
-    </div>
-</body>
+            <!-- Container do conteúdo textual -->
+            <div class="content">                  <!-- Div com o texto descritivo -->
+                <!-- Subtítulo da seção -->
+                <h3>O que faz nosso café especial</h3>  <!-- Subtítulo explicativo -->
+                <!-- Primeiro parágrafo descritivo -->
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sunt beatae at aut voluptates dignissimos magnam quam, rerum eligendi facilis quaerat quis quos sint consectetur porro qui ut saepe labore.</p>  <!-- Primeira descrição sobre a empresa -->
+                <!-- Segundo parágrafo descritivo -->
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil repellat iure quam animi dolor ducimus cupiditate, doloremque in nulla delectus earum numquam incidunt accusamus ab consequatur. Sapiente totam quae itaque.</p>  <!-- Segunda descrição complementar -->
+                <!-- Botão de ação secundário -->
+                <a href="#" class="btn">Saiba mais</a>  <!-- Botão para mais informações -->
+            </div>                                 <!-- Fim do container de conteúdo -->
+        </div>                                     <!-- Fim do container row -->
+    </section>                                     <!-- Fim da seção sobre -->
 
-</html>
+    <!-- ===============================================
+         SEÇÃO MENU (CARDÁPIO)
+         =============================================== -->
+
+    <section class="menu" id="menu">               <!-- Seção do cardápio com ID para navegação -->
+        <!-- Título da seção -->
+        <h2 class="title">Nosso <span>Menu</span></h2>  <!-- Título da seção com palavra destacada -->
+
+        <!-- Container em grid para os produtos -->
+        <div class="box-container">                <!-- Container principal dos produtos em grid -->
+            
+            <!-- Produto 1 -->
+            <div class="box">                      <!-- Card individual do produto -->
+                <img src="/assets/menu-1.png" alt="item-1">  <!-- Imagem do produto 1 -->
+                <h3>Café coado</h3>                <!-- Nome do produto -->
+                <div class="price">R$ 15,99 <span>R$20,99</span></div>  <!-- Preço atual e preço antigo riscado -->
+                <a href="#" class="btn">Adicione ao carrinho</a>  <!-- Botão para adicionar ao carrinho -->
+            </div>                                 <!-- Fim do card produto 1 -->
+
+            <!-- Produto 2 -->
+            <div class="box">                      <!-- Card individual do produto -->
+                <img src="/assets/menu-2.png" alt="item-2">  <!-- Imagem do produto 2 -->
+                <h3>Café coado</h3>                <!-- Nome do produto -->
+                <div class="price">R$ 15,99 <span>R$20,99</span></div>  <!-- Preço atual e preço antigo -->
+                <a href="#" class="btn">Adicione ao carrinho</a>  <!-- Botão de ação -->
+            </div>                                 <!-- Fim do card produto 2 -->
+
+            <!-- Produto 3 -->
+            <div class="box">                      <!-- Card individual do produto -->
+                <img src="/assets/menu-3.png" alt="item-3">  <!-- Imagem do produto 3 -->
+                <h3>Café coado</h3>                <!-- Nome do produto -->
+                <div class="price">R$ 13,99 <span>R$18,99</span></div>  <!-- Preço com desconto -->
+                <a href="#" class="btn">Adicione ao carrinho</a>  <!-- Botão de compra -->
+            </div>                                 <!-- Fim do card produto 3 -->
+
+            <!-- Produto 4 -->
+            <div class="box">                      <!-- Card individual do produto -->
+                <img src="/assets/menu-4.png" alt="item-4">  <!-- Imagem do produto 4 -->
+                <h3>Café coado</h3>                <!-- Nome do produto -->
+                <div class="price">R$ 11,99 <span>R$12,99</span></div>  <!-- Preço promocional -->
+                <a href="#" class="btn">Adicione ao carrinho</a>  <!-- Botão de ação -->
+            </div>                                 <!-- Fim do card produto 4 -->
+
+            <!-- Produto 5 -->
+            <div class="box">                      <!-- Card individual do produto -->
+                <img src="/assets/menu-5.png" alt="item-5">  <!-- Imagem do produto 5 -->
+                <h3>Café coado</h3>                <!-- Nome do produto -->
+                <div class="price">R$ 8,99 <span>R$13,99</span></div>  <!-- Preço com maior desconto -->
+                <a href="#" class="btn">Adicione ao carrinho</a>  <!-- Botão de compra -->
+            </div>                                 <!-- Fim do card produto 5 -->
+
+            <!-- Produto 6 -->
+            <div class="box">                      <!-- Card individual do produto -->
+                <img src="/assets/menu-6.png" alt="item-6">  <!-- Imagem do produto 6 -->
+                <h3>Café coado</h3>                <!-- Nome do produto -->
+                <div class="price">R$ 11,20 <span>R$15,99</span></div>  <!-- Preço final do produto -->
+                <a href="#" class="btn">Adicione ao carrinho</a>  <!-- Botão final de ação -->
+            </div>                                 <!-- Fim do card produto 6 -->
+        </div>                                     <!-- Fim do container de produtos -->
+    </section>                                     <!-- Fim da seção menu -->
+
+    <!-- ===============================================
+         SEÇÃO AVALIAÇÕES DOS CLIENTES (REVIEWS)
+         =============================================== -->
+
+    <section class="review" id="review">           <!-- Seção de avaliações com ID para navegação -->
+        <!-- Título da seção -->
+        <h2 class="title">Nossos <span>Clientes</span></h2>  <!-- Título com palavra destacada -->
+        
+        <!-- Container dos cards de avaliação -->
+        <div class="box-container">                <!-- Container em grid para as avaliações -->
+            
+            <!-- Avaliação do Cliente 1 -->
+            <div class="box">                      <!-- Card individual da avaliação -->
+                <!-- Ícone de aspas para comentário -->
+                <img src="/assets/quote-img.png" alt="comentario">  <!-- Imagem decorativa de aspas -->
+                <!-- Comentário do cliente -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellendus culpa officia distinctio aspernatur reprehenderit, ad repudiandae maxime, totam architecto reiciendis asperiores ipsum blanditiis, veritatis earum! Eveniet, incidunt. Suscipit, sapiente!</p>  <!-- Texto da avaliação -->
+                <!-- Foto do cliente -->
+                <img src="/assets/pic-1.png" alt="foto-cliente" class="user">  <!-- Foto circular do cliente -->
+                <!-- Nome do cliente -->
+                <h3>João da Silva</h3>             <!-- Nome do avaliador -->
+                <!-- Sistema de avaliação por estrelas -->
+                <div class="stars">                <!-- Container das estrelas de avaliação -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 1 (cheia) -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 2 (cheia) -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 3 (cheia) -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 4 (cheia) -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star-half-empty.png" alt="star-half-empty"/>  <!-- Estrela 5 (meia) - 4.5 estrelas -->
+                </div>                             <!-- Fim do sistema de estrelas -->
+            </div>                                 <!-- Fim da avaliação 1 -->
+
+            <!-- Avaliação do Cliente 2 -->
+             <div class="box">                     <!-- Card da segunda avaliação -->
+                <!-- Ícone de comentário -->
+                <img src="/assets/quote-img.png" alt="comentario">  <!-- Aspas decorativas -->
+                <!-- Texto da avaliação -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellendus culpa officia distinctio aspernatur reprehenderit, ad repudiandae maxime, totam architecto reiciendis asperiores ipsum blanditiis, veritatis earum! Eveniet, incidunt. Suscipit, sapiente!</p>  <!-- Comentário da cliente -->
+                <!-- Foto da cliente -->
+                <img src="/assets/pic-2.png" alt="foto-cliente" class="user">  <!-- Foto da segunda cliente -->
+                <!-- Nome da cliente -->
+                <h3>Maria Santos</h3>              <!-- Nome da avaliadora -->
+                <!-- Avaliação em estrelas -->
+                <div class="stars">                <!-- Sistema de estrelas -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela completa -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela completa -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela completa -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela completa -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star-half-empty.png" alt="star-half-empty"/>  <!-- Meia estrela -->
+                </div>                             <!-- Fim das estrelas -->
+            </div>                                 <!-- Fim da avaliação 2 -->
+
+            <!-- Avaliação do Cliente 3 -->
+             <div class="box">                     <!-- Card da terceira avaliação -->
+                <!-- Ícone de aspas -->
+                <img src="/assets/quote-img.png" alt="comentario">  <!-- Imagem decorativa -->
+                <!-- Comentário do cliente -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellendus culpa officia distinctio aspernatur reprehenderit, ad repudiandae maxime, totam architecto reiciendis asperiores ipsum blanditiis, veritatis earum! Eveniet, incidunt. Suscipit, sapiente!</p>  <!-- Texto da terceira avaliação -->
+                <!-- Foto do cliente -->
+                <img src="/assets/pic-3.png" alt="foto-cliente" class="user">  <!-- Foto do terceiro cliente -->
+                <!-- Nome do cliente -->
+                <h3>Rodolfo</h3>                   <!-- Nome do terceiro avaliador -->
+                <!-- Sistema de estrelas -->
+                <div class="stars">                <!-- Container de avaliação -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 1 -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 2 -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 3 -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png" alt="star--v1"/>  <!-- Estrela 4 -->
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/star-half-empty.png" alt="star-half-empty"/>  <!-- Meia estrela final -->
+                </div>                             <!-- Fim da avaliação por estrelas -->
+            </div>                                 <!-- Fim da terceira avaliação -->
+        </div>                                     <!-- Fim do container de avaliações -->
+    </section>                                     <!-- Fim da seção de reviews -->
+
+    <!-- ===============================================
+         SEÇÃO ENDEREÇO/LOCALIZAÇÃO
+         =============================================== -->
+
+    <section class="address" id="address">         <!-- Seção de endereço com ID para navegação -->
+        <!-- Título da seção -->
+        <h2 class="title">Nosso <span>Endereço</span></h2>  <!-- Título com palavra destacada -->
+
+        <!-- Mapa incorporado do Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5411476507734!2d-38.34242472386893!3d-12.93718635912035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716179571642841%3A0xafee763012cd4019!2sCAF%C3%89%20SERTANEJO!5e0!3m2!1spt-BR!2sbr!4v1754446526825!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>                                    
+
+    <!-- ===============================================
+         RODAPÉ COM REDES SOCIAIS
+         =============================================== -->
+
+    <section class="footer">                       <!-- Seção do rodapé -->
+        <!-- Container das redes sociais -->
+        <div class="share">                        <!-- Container dos ícones de compartilhamento -->
+            <!-- Ícone do Instagram -->
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="instagram-new"/>  <!-- Link/ícone do Instagram (30x30px, branco) -->
+            <!-- Ícone do Facebook -->
+            <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="facebook-new"/>  <!-- Link/ícone do Facebook (30x30px, branco) -->
+            <!-- Ícone do Twitter/X -->
+            <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/twitterx--v2.png" alt="twitterx--v2"/>  <!-- Link/ícone do Twitter/X (30x30px, branco) -->
+        </div>                                     <!-- Fim do container de redes sociais -->
+    </section>                                     <!-- Fim do rodapé -->
+
+</body>                                            <!-- Fim do corpo da página -->
+
+</html>                                            <!-- Fim do documento HTML -->
