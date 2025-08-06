@@ -1,117 +1,340 @@
+/* ========================================
+   IMPORTAÇÃO DE FONTES E CONFIGURAÇÕES GLOBAIS
+   ======================================== */
+
+/* Importa a fonte Roboto do Google Fonts com todos os pesos disponíveis */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Variáveis CSS globais para cores e estilos reutilizáveis */
 :root {
-    --main-color: #d3ad7f;
-    --black: #13131a;
-    --bg: #010103;
-    --border: 0.1rem solid rgba(255,255,255,0.3);
-    font-size: 10px;
+    --main-color: #d3ad7f;  /* Cor principal (dourado/café) */
+    --black: #13131a;       /* Preto escuro personalizado */
+    --bg: #010103;          /* Cor de fundo principal (preto quase total) */
+    --border: 0.1rem solid rgba(255,255,255,0.3);  /* Borda padrão translúcida */
+    font-size: 10px;        /* Tamanho base da fonte (para cálculos rem) */
 }
 
+/* Reset universal - remove estilos padrão do navegador */
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: 0.2s linear;
-    font-family: "Roboto", sans-serif;
+    margin: 0;              /* Remove margem padrão */
+    padding: 0;             /* Remove padding padrão */
+    outline: none;          /* Remove contorno padrão */
+    border: none;           /* Remove bordas padrão */
+    text-decoration: none;  /* Remove sublinhado de links */
+    text-transform: capitalize;  /* Primeira letra maiúscula */
+    transition: 0.2s linear;     /* Transição suave para animações */
+    font-family: "Roboto", sans-serif;  /* Define fonte padrão */
 }
 
+/* Transição suave para navegação entre seções */
+html {
+    scroll-behavior: smooth;    /* Rolagem suave ao clicar nos links âncora */
+}
+
+/* ========================================
+   ESTILOS GERAIS DO CORPO E SEÇÕES
+   ======================================== */
+
+/* Configurações globais do corpo da página */
 body {
-    background-color: var(--bg);
+    background-color: var(--bg);  /* Define cor de fundo usando variável CSS */
 }
 
-
+/* Configurações padrão para todas as seções */
 section {
-    padding: 3rem 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
+    padding: 3rem 2rem;    /* Espaçamento interno: 3rem vertical, 2rem horizontal */
+    margin: 0 auto;        /* Centraliza horizontalmente */
+    max-width: 1200px;     /* Largura máxima para responsividade */
 }
 
-/*aqui foi feito o cabecalho do site*/
+/* ========================================
+   CABEÇALHO (HEADER) DO SITE
+   ======================================== */
+
+/* Estilo principal do cabeçalho fixo */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    border-bottom: var(--border);
+    position: fixed;        /* Fixa o header no topo da página */
+    top: 0;                 /* Posiciona no topo */
+    left: 0;                /* Alinha à esquerda */
+    right: 0;               /* Estende até a direita */
+    z-index: 99;            /* Fica acima de outros elementos */
+    border-bottom: var(--border);  /* Adiciona borda inferior */
+    background-color: var(--bg);   /* Define cor de fundo */
 }
 
-/*elementos do header*/
-.header section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+/* Layout interno do header */
+.header section {
+    display: flex;              /* Layout flexível */
+    align-items: center;        /* Alinha itens verticalmente */
+    justify-content: space-between;  /* Distribui espaço entre elementos */
+    padding-top: 1.5rem;       /* Espaçamento superior */
+    padding-bottom: 1.5rem;    /* Espaçamento inferior */
 }
 
-/*aqui foram feito as alteracoes da navbar*/
-.navbar a{
-    margin: 0 1rem;
-    font-size: 1.8rem;
-    color: #fff;
+/* ========================================
+   NAVEGAÇÃO (NAVBAR)
+   ======================================== */
+
+/* Estilo dos links da navegação */
+.navbar a {
+    margin: 0 1rem;         /* Margem horizontal entre links */
+    font-size: 1.8rem;      /* Tamanho da fonte dos links */
+    color: #fff;            /* Cor dos links (branca) */
 }
 
+/* Efeito hover nos links da navegação */
 .navbar a:hover {
-    color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
-    padding-bottom: 0.5rem;
-    font-size: 2rem;
+    color: var(--main-color);          /* Muda cor para a cor principal */
+    border-bottom: 0.1rem solid var(--main-color);  /* Adiciona borda inferior */
+    padding-bottom: 0.5rem;            /* Espaçamento inferior */
+    font-size: 2rem;                   /* Aumenta tamanho da fonte */
 }
 
+/* ========================================
+   ÍCONES DO CABEÇALHO
+   ======================================== */
+
+/* Estilo das imagens dos ícones */
 .icons img {
-    margin: 1rem;
-    cursor: pointer;
+    margin: 1rem;           /* Margem ao redor dos ícones */
+    cursor: pointer;        /* Cursor de ponteiro ao passar sobre */
 }
 
+/* Efeito hover nos ícones - aumenta o tamanho */
 .icons img:hover {
-    width: 40px;
-    height: 40px;
+    width: 40px;            /* Largura aumentada no hover */
+    height: 40px;           /* Altura aumentada no hover */
 }
 
 
-/*botao total*/
+/* ========================================
+   BOTÕES GLOBAIS
+   ======================================== */
+
+/* Estilo padrão para todos os botões */
 .btn {
-    background: var(--main-color);
-    color: #fff;
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    display: inline-block;
+    background: var(--main-color);      /* Cor de fundo usando cor principal */
+    color: #fff;                        /* Cor do texto (branca) */
+    padding: 1rem 3rem;                 /* Espaçamento interno: 1rem vertical, 3rem horizontal */
+    font-size: 1.7rem;                  /* Tamanho da fonte */
+    cursor: pointer;                    /* Cursor de ponteiro */
+    margin-top: 1rem;                   /* Margem superior */
+    display: inline-block;              /* Exibição como bloco inline */
+}
+
+/* Efeito hover nos botões */
+.btn:hover {
+    letter-spacing: 0.1rem;             /* Aumenta espaçamento entre letras */
 }
 
 
-/*aqui esta todo o conteudo incial*/
+/* ========================================
+   SEÇÃO HOME (PÁGINA INICIAL)
+   ======================================== */
+
+/* Container principal da página inicial com imagem de fundo */
 .home-container {
-    background: url("/assets/home-img.jpg");
-    background-position: center;
-    background-size: cover;
+    background: url("/assets/home-img.jpg");  /* Define imagem de fundo da home */
+    background-position: center;              /* Centraliza a imagem de fundo */
+    background-size: cover;                   /* Faz a imagem cobrir toda a área */
 }
 
+/* Seção dentro do container home com altura completa da tela */
 .home-container section {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
+    display: flex;          /* Layout flexível */
+    align-items: center;    /* Centraliza verticalmente */
+    min-height: 100vh;      /* Altura mínima igual à altura da viewport */
 }
 
+/* Container do conteúdo textual da home */
 .content {
-    max-width: 60rem;
+    max-width: 60rem;       /* Largura máxima do conteúdo */
 }
 
+/* Título principal da home */
 .content h3 {
-    color: #fff;
-    font-size: 6rem;
+    color: #fff;            /* Cor branca para o texto */
+    font-size: 6rem;        /* Tamanho grande da fonte */
 }
 
+/* Parágrafo descritivo da home */
 .content p {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.8;
-    padding: 1rem 0rem;
+    color: #fff;            /* Cor branca para o texto */
+    font-size: 2rem;        /* Tamanho da fonte */
+    font-weight: 100;       /* Peso da fonte bem leve */
+    line-height: 1.8;       /* Altura da linha para melhor legibilidade */
+    padding: 1rem 0rem;     /* Espaçamento vertical */
+}
+
+/* ========================================
+   TÍTULOS GLOBAIS
+   ======================================== */
+
+/* Estilo padrão para títulos de seções */
+.title {
+    font-size: 4rem;                    /* Tamanho grande da fonte */
+    color: var(--main-color);           /* Cor principal (dourado/café) */
+    text-align: center;                 /* Centraliza o texto */
+    text-transform: uppercase;          /* Transforma em maiúsculas */
+    margin-bottom: 4rem;                /* Margem inferior para espaçamento */
+}
+
+/* Estilo para spans dentro dos títulos */
+.title span {
+    color: #fff;                        /* Cor branca para destaque */
+    text-transform: uppercase;          /* Mantém em maiúsculas */
+}
+
+/* ========================================
+   SEÇÃO SOBRE NÓS (ABOUT)
+   ======================================== */
+
+/* Container principal da seção "Sobre Nós" */
+.about .row {
+    display: flex;                      /* Layout flexível horizontal */
+    align-items: center;                /* Alinha itens verticalmente ao centro */
+    background-color: var(--black);     /* Cor de fundo preta */
+    gap: 1.5rem;                        /* Espaçamento entre elementos */
+}
+
+/* Container do conteúdo da seção "Sobre Nós" */
+.about .row .content {
+    padding: 2rem;                      /* Espaçamento interno */
+}
+
+/* Título da seção "Sobre Nós" */
+.about .row .content h3 {
+    font-size: 3rem;                    /* Tamanho grande da fonte */
+    color: #fff;                        /* Cor branca do texto */
+}
+
+/* Parágrafo descritivo da seção "Sobre Nós" */
+.about .row .content p {
+    font-size: 1.6rem;                  /* Tamanho da fonte */
+    color: #fff;                        /* Cor branca do texto */
+    padding: 1rem 0;                    /* Espaçamento vertical */
+    line-height: 1.8;                   /* Altura da linha para legibilidade */
+}
+
+/* ========================================
+   SEÇÃO MENU (CARDÁPIO)
+   ======================================== */
+
+/* Container principal para boxes do menu em grid */
+.box-container {
+    display: grid;                                   /* Layout em grade */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));  /* Colunas responsivas */
+    gap: 1.5rem;                                     /* Espaçamento entre boxes */
+}
+
+/* Estilo individual de cada box do menu */
+.menu .box-container .box {
+    text-align: center;      /* Centraliza conteúdo */
+    border: var(--border);   /* Borda usando variável global */
+    padding: 5rem;           /* Espaçamento interno generoso */
+    cursor: pointer;         /* Cursor de ponteiro para interação */
+}
+
+/* Imagens dos produtos no menu */
+.menu .box-container .box img {
+    height: 10rem;           /* Altura fixa para as imagens */
+}
+
+/* Título dos produtos no menu */
+.menu .box-container .box h3 {
+    color: #fff;             /* Cor branca para o texto */
+    font-size: 2rem;         /* Tamanho da fonte */
+    padding: 1rem 0;         /* Espaçamento vertical */
+}
+
+/* Preço principal dos produtos */
+.menu .box-container .box .price {
+    color: #fff;             /* Cor branca para o texto */
+    font-size: 2.5rem;       /* Tamanho maior para destaque */
+    padding: 0.5rem 0;       /* Espaçamento vertical menor */
+}
+
+/* Preço antigo (riscado) dos produtos */
+.menu .box-container .box span {
+    font-size: 1.5rem;               /* Tamanho menor da fonte */
+    text-decoration: line-through;   /* Linha atravessando o texto */
+    font-weight: lighter;            /* Peso da fonte mais leve */
+}
+
+/* Efeito hover no box do menu - muda fundo para branco */
+.menu .box-container .box:hover {
+    background-color: #fff;          /* Fundo branco no hover */
+} 
+
+/* Efeito hover - todos os elementos filhos ficam escuros */
+.menu .box-container .box:hover>* {
+    color: var(--black);             /* Cor escura para todos os filhos */
+}
+
+/* ========================================
+   SEÇÃO AVALIAÇÕES (REVIEWS)
+   ======================================== */
+
+/* Estilo individual de cada box de avaliação */
+.review .box-container .box {
+    border: var(--main-color);         /* Borda com cor principal */
+    text-align: center;                /* Centraliza conteúdo */
+    padding: 3rem 2rem;                /* Espaçamento interno */
+    font-weight: lighter;              /* Peso da fonte mais leve */
+}
+
+/* Parágrafo de comentário da avaliação */
+.review .box-container .box p {
+    font-size: 1.5rem;                 /* Tamanho da fonte */
+    color: #fff;                       /* Cor branca para o texto */
+    padding: 2rem 0;                   /* Espaçamento vertical */
+    line-height: 1.8rem;               /* Altura da linha */
+}
+
+/* Imagem do usuário que fez a avaliação */
+.review .box-container .box .user {
+    height: 7rem;                      /* Altura da imagem */
+    width: 7rem;                       /* Largura da imagem */
+    border-radius: 50%;                /* Torna a imagem circular */
+}
+
+/* Container de endereço/localização */
+.address {
+    display: flex;                     /* Layout flexível */
+    align-items: center;               /* Alinha itens ao centro */
+    flex-direction: column;            /* Direção vertical */
+}
+
+/* Nome do usuário na avaliação */
+.review .box-container .box h3 {
+    color: #fff;                       /* Cor branca para o texto */
+    font-size: 2rem;                   /* Tamanho da fonte */
+    margin: 1rem 0;                    /* Margem vertical */
+}
+
+/* ========================================
+   RODAPÉ (FOOTER)
+   ======================================== */
+
+/* Estilo principal do rodapé */
+.footer {
+    text-align: center;                /* Centraliza todo o conteúdo do rodapé */
+}
+
+/* Container das redes sociais no rodapé */
+.footer .share {
+    padding: 1rem 0;                   /* Espaçamento vertical */
+}
+
+/* Ícones das redes sociais */
+.footer .share img {
+    margin: 0.3rem;                    /* Margem pequena entre ícones */
+    cursor: pointer;                   /* Cursor de ponteiro para interação */
+    border-radius: 50%;                /* Torna os ícones circulares */
+    padding: 1rem;                     /* Espaçamento interno dos ícones */
+}
+
+/* Efeito hover nos ícones das redes sociais */
+.footer .share img:hover {
+    background-color: var(--main-color);  /* Cor de fundo no hover */
 }
